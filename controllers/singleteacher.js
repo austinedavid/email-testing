@@ -8,7 +8,7 @@ export const SingleMessage = async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "austinedavid96@gmail.com",
+        user: process.env.senderAddress,
         pass: process.env.Gmailpassword, // Use an app-specific password
       },
     });
